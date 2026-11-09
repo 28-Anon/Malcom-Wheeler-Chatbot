@@ -1,2 +1,2 @@
-# Malcom-Wheeler-Chatbot
+# Malcom-Wheeler-Nicholson-Chatbot
 Chatbot
