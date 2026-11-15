@@ -13,13 +13,13 @@
    Example:
    Added a test that checks the buttons show up and work when clicked
    Ran npm test and everything passed
-   Checked it on a laptop screen and a phone-sized screen -->
+   Checked it on a laptop screen or a phone -->
 
    ## Before you submit and examples of what you can say
    - I ran `npm test` and it passed
    - I added comments explaining my new functions
    - I removed any test code or debug messages I don't need
-   - My branch name has the issue number in it 
+   - My branch name has the issue number in it  
 
 
    Closes #
