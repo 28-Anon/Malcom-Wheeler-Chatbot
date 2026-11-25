@@ -32,3 +32,13 @@ export interface DialogueResponse {
   choices: ChoiceView[];
   state: ClientState;
 }
+
+/** Who said a message in the conversation log. */
+export type Speaker = "mwn" | "user";
+
+/** One message shown in the conversation history. */
+export interface ChatMessage {
+  id: string;
+  speaker: Speaker;
+  text: string;
+}
