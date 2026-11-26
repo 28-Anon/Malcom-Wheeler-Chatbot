@@ -1,0 +1,42 @@
+[
+  { "intent": "char_doctor_occult", "keywords": ["doctor occult", "dr occult", "occult"], "target": "founding_char_occult" },
+  { "intent": "char_henri_duval", "keywords": ["henri duval", "duval"], "target": "founding_char_duval" },
+  { "intent": "char_slam_bradley", "keywords": ["slam bradley", "slam", "bradley"], "target": "founding_char_slam" },
+  { "intent": "char_superman_warm", "keywords": ["superman", "man of steel", "action comics"], "target": "legacy_char_superman", "conditions": { "minRapport": 60 } },
+  { "intent": "char_superman_cold", "keywords": ["superman", "man of steel", "action comics"], "target": "legacy_char_superman_deflect", "conditions": { "maxRapport": 59 } },
+  { "intent": "char_batman", "keywords": ["batman", "bruce wayne", "detective comics 27"], "target": "legacy_char_batman" },
+  { "intent": "char_later_heroes", "keywords": ["wonder woman", "flash", "justice league", "green lantern", "aquaman"], "target": "legacy_char_later" },
+
+  { "intent": "ask_who", "keywords": ["who are you", "your name", "introduce yourself"], "target": "intro_02" },
+
+  { "intent": "ask_family", "keywords": ["family", "mother", "childhood", "grew up", "roosevelt", "kipling"], "target": "military_01b" },
+  { "intent": "ask_army", "keywords": ["army", "cavalry", "military", "soldier", "major", "war"], "target": "military_01" },
+  { "intent": "ask_school", "keywords": ["school", "manlius", "join the army", "joined the army"], "target": "military_02" },
+  { "intent": "ask_postings", "keywords": ["mexico", "border", "philippines", "siberia", "bolsheviks"], "target": "military_03" },
+  { "intent": "ask_france", "keywords": ["france", "french", "saint cyr"], "target": "military_03b" },
+  { "intent": "ask_letter", "keywords": ["letter", "harding", "president"], "target": "military_04" },
+  { "intent": "ask_court_martial", "keywords": ["court martial", "courtmartial", "convicted", "trial"], "target": "military_05" },
+  { "intent": "ask_shooting_warm", "keywords": ["shot", "shooting", "bullet", "wounded"], "target": "military_06", "conditions": { "minRapport": 60 } },
+  { "intent": "ask_shooting_cold", "keywords": ["shot", "shooting", "bullet", "wounded"], "target": "military_04", "conditions": { "maxRapport": 59 } },
+  { "intent": "ask_resign", "keywords": ["resign", "resigned", "left the army", "leave the army"], "target": "military_07" },
+
+  { "intent": "ask_pulps", "keywords": ["pulp", "pulps", "argosy", "adventure magazine", "writer", "writing"], "target": "pulps_01" },
+
+  { "intent": "ask_siegel_shuster", "keywords": ["siegel", "shuster", "cleveland"], "target": "founding_05" },
+  { "intent": "ask_pay_artists", "keywords": ["pay the artists", "paid the artists", "pay them", "paid late", "late payment"], "target": "founding_05b" },
+  { "intent": "ask_new_fun", "keywords": ["new fun", "first comic", "comic book"], "target": "founding_04" },
+  { "intent": "ask_advertising", "keywords": ["advert", "adverts", "advertising"], "target": "founding_04b" },
+  { "intent": "ask_titles", "keywords": ["new comics", "detective comics"], "target": "founding_07" },
+  { "intent": "ask_founding", "keywords": ["national allied", "dc comics", "publishing", "publisher", "founded", "founding"], "target": "founding_01" },
+
+  { "intent": "ask_debts", "keywords": ["debt", "debts", "owe", "money", "bankrupt", "bankruptcy"], "target": "downfall_01" },
+  { "intent": "ask_donenfeld", "keywords": ["donenfeld", "liebowitz", "partner", "partnership"], "target": "downfall_02" },
+  { "intent": "ask_lockout_warm", "keywords": ["cuba", "cruise", "locked", "lockout", "lawyers"], "target": "downfall_04", "conditions": { "minRapport": 60 } },
+  { "intent": "ask_lockout_cold", "keywords": ["cuba", "cruise", "locked", "lockout", "lawyers"], "target": "downfall_03c", "conditions": { "maxRapport": 59 } },
+
+  { "intent": "ask_regrets", "keywords": ["regret", "regrets", "mistake", "wrong partner"], "target": "legacy_02" },
+  { "intent": "ask_advice", "keywords": ["advice", "start a company", "starting a company"], "target": "legacy_03" },
+  { "intent": "ask_legacy", "keywords": ["legacy", "proud of", "remembered", "children reading"], "target": "legacy_01" },
+
+  { "intent": "say_goodbye", "keywords": ["bye", "goodbye", "farewell", "thats all", "that is all", "im done"], "target": "ending_01" }
+]
