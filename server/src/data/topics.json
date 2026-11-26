@@ -1,0 +1,9 @@
+[
+  { "id": "intro", "name": "Introduction" },
+  { "id": "military", "name": "Army career" },
+  { "id": "pulps", "name": "Pulp writing" },
+  { "id": "founding", "name": "Founding National Allied" },
+  { "id": "downfall", "name": "Losing the company" },
+  { "id": "legacy", "name": "Legacy" },
+  { "id": "ending", "name": "Ending" }
+]
