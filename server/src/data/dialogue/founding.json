@@ -1,0 +1,138 @@
+[
+  {
+    "id": "founding_01",
+    "topic": "founding",
+    "type": "line",
+    "text": "Every newspaper strip worth reprinting was already spoken for. So I thought, why not make our own? New stories, new characters, made for the magazine.",
+    "mood": "proud",
+    "onEnter": { "unlockTopics": ["downfall"] },
+    "choices": [
+      { "id": "a", "text": "What did you call your company?", "next": "founding_02" },
+      { "id": "b", "text": "Wasn't that a risk?", "next": "founding_03" }
+    ]
+  },
+  {
+    "id": "founding_02",
+    "topic": "founding",
+    "type": "line",
+    "text": "National Allied Publications. I started it in 1934 with more ambition than money, which turned out to be a habit of mine.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "What was your first comic?", "next": "founding_04" }
+    ]
+  },
+  {
+    "id": "founding_03",
+    "topic": "founding",
+    "type": "line",
+    "text": "Every newsstand dealer thought so. An unknown publisher with unknown characters. They looked at our books like I'd handed them a dead fish.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "So what did you publish?", "next": "founding_04" }
+    ]
+  },
+  {
+    "id": "founding_04",
+    "topic": "founding",
+    "type": "line",
+    "text": "New Fun. February 1935. Big as a newspaper page and every strip in it brand new. Nobody had done that before, whatever anyone tells you.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "What else was different about it?", "next": "founding_04b" },
+      { "id": "b", "text": "Who drew for you?", "next": "founding_05" }
+    ]
+  },
+  {
+    "id": "founding_04b",
+    "topic": "founding",
+    "type": "line",
+    "text": "We sold advertising in it, which no comic book had done before. A magazine has to pay its own way somehow.",
+    "mood": "neutral",
+    "choices": [
+      { "id": "a", "text": "Who drew the strips?", "next": "founding_05" }
+    ]
+  },
+  {
+    "id": "founding_05",
+    "topic": "founding",
+    "type": "line",
+    "text": "Two boys from Cleveland sent me pages. Rough, but full of energy. Siegel and Shuster. I bought their work when nobody else would.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "What did they create for you?", "next": "founding_06", "effects": { "rapport": 5 } },
+      {
+        "id": "b",
+        "text": "Did you pay them properly?",
+        "next": "founding_05b",
+        "effects": { "rapport": -5, "setFlags": ["askedAboutPay"] }
+      }
+    ]
+  },
+  {
+    "id": "founding_05b",
+    "topic": "founding",
+    "type": "line",
+    "text": "I paid them. Not always on time, I grant you. Money came in slower than it went out, and every publisher in a Depression knows that arithmetic.",
+    "mood": "guarded",
+    "choices": [
+      { "id": "a", "text": "What did they create for you?", "next": "founding_06" }
+    ]
+  },
+  {
+    "id": "founding_06",
+    "topic": "founding",
+    "type": "line",
+    "text": "Their first comic pages ran in New Fun that October. Henri Duval, a swordsman, and Doctor Occult, a detective of the supernatural.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "Tell me about Henri Duval.", "next": "founding_char_duval" },
+      { "id": "b", "text": "Tell me about Doctor Occult.", "next": "founding_char_occult" },
+      { "id": "c", "text": "What came after New Fun?", "next": "founding_07" }
+    ]
+  },
+  {
+    "id": "founding_char_duval",
+    "topic": "founding",
+    "type": "line",
+    "text": "A swashbuckler in the old French style. Rough work, but you could see those boys could tell a story. I saw it before anyone else did.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "And Doctor Occult?", "next": "founding_char_occult" },
+      { "id": "b", "text": "What came after New Fun?", "next": "founding_07" }
+    ]
+  },
+  {
+    "id": "founding_char_occult",
+    "topic": "founding",
+    "type": "line",
+    "text": "A detective who fought ghosts and sorcerers. They signed it Leger and Reuths, made-up names, as young men starting out sometimes do.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "And Henri Duval?", "next": "founding_char_duval" },
+      { "id": "b", "text": "What came after New Fun?", "next": "founding_07" }
+    ]
+  },
+  {
+    "id": "founding_07",
+    "topic": "founding",
+    "type": "line",
+    "text": "New Comics followed that December, and Detective Comics in 1937. Each one cost more than the last.",
+    "mood": "neutral",
+    "choices": [
+      { "id": "a", "text": "Who was in Detective Comics?", "next": "founding_char_slam" },
+      { "id": "b", "text": "How did you pay for it all?", "next": "downfall_01" },
+      { "id": "c", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "founding_char_slam",
+    "topic": "founding",
+    "type": "line",
+    "text": "Slam Bradley, a hard-fisted private eye. The idea was mine, or so I have always said, and the Cleveland boys brought him to life. I was prouder of him than I let on.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "How did you pay for it all?", "next": "downfall_01" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  }
+]
