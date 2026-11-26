@@ -1,0 +1,59 @@
+[
+  {
+    "id": "intro_01",
+    "topic": "intro",
+    "type": "line",
+    "text": "Come in, come in. Not many people knock on this door asking about the old days anymore. Sit down, friend.",
+    "mood": "warm",
+    "choices": [
+      { "id": "a", "text": "Thank you. Who am I speaking to?", "next": "intro_02", "effects": { "rapport": 5 } },
+      { "id": "b", "text": "I'd like to ask you about your life.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "intro_02",
+    "topic": "intro",
+    "type": "line",
+    "text": "Major Malcolm Wheeler-Nicholson, formerly of the United States Cavalry. These days, mostly a writer, and a man with a long memory.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "Why don't many people visit?", "next": "intro_03" },
+      { "id": "b", "text": "Let's begin, then.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "intro_03",
+    "topic": "intro",
+    "type": "line",
+    "text": "I started something once that grew far bigger than me. Other men's names ended up on it. A fellow gets used to that, mostly.",
+    "mood": "guarded",
+    "choices": [
+      { "id": "a", "text": "I'd like to hear your side of it.", "next": "intro_hub", "effects": { "rapport": 5 } }
+    ]
+  },
+  {
+    "id": "intro_hub",
+    "topic": "intro",
+    "type": "hub",
+    "text": "Ask what you like. I have answered harder questions in front of a court-martial.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Tell me about your time in the Army.", "next": "military_01" },
+      { "id": "b", "text": "How did you come to write for the pulps?", "next": "pulps_01" },
+      { "id": "c", "text": "How did you start publishing comics?", "next": "founding_01" },
+      {
+        "id": "d",
+        "text": "What happened to your company?",
+        "next": "downfall_01",
+        "conditions": { "requiresTopics": ["founding"] }
+      },
+      {
+        "id": "e",
+        "text": "What do you make of Superman and Batman now?",
+        "next": "legacy_01",
+        "conditions": { "requiresTopics": ["downfall"] }
+      },
+      { "id": "f", "text": "I think that's all I wanted to ask.", "next": "ending_01" }
+    ]
+  }
+]
