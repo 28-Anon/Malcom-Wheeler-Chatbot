@@ -1,0 +1,55 @@
+[
+  {
+    "id": "pulps_01",
+    "topic": "pulps",
+    "type": "line",
+    "text": "The pulp editors wanted adventure, and I had lived some. Most fellows writing about cavalry charges had never sat on a horse.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Which magazines did you write for?", "next": "pulps_02" },
+      { "id": "b", "text": "Did it pay well?", "next": "pulps_03" }
+    ]
+  },
+  {
+    "id": "pulps_02",
+    "topic": "pulps",
+    "type": "line",
+    "text": "Adventure and Argosy, mostly. Soldiering yarns and history, the kind of thing a boy reads under the covers with a flashlight.",
+    "mood": "warm",
+    "choices": [
+      { "id": "a", "text": "Had you written anything before the pulps?", "next": "pulps_02b", "effects": { "rapport": 5 } },
+      { "id": "b", "text": "Did it pay well?", "next": "pulps_03" }
+    ]
+  },
+  {
+    "id": "pulps_02b",
+    "topic": "pulps",
+    "type": "line",
+    "text": "A book, Modern Cavalry, published by Macmillan in 1922. Serious stuff for serious officers. The pulps paid better than military theory, I'll say that.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "How much did the pulps pay?", "next": "pulps_03" }
+    ]
+  },
+  {
+    "id": "pulps_03",
+    "topic": "pulps",
+    "type": "line",
+    "text": "A penny or two a word. You learn to make every word earn its keep.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Did you do anything besides magazines?", "next": "pulps_04" }
+    ]
+  },
+  {
+    "id": "pulps_04",
+    "topic": "pulps",
+    "type": "line",
+    "text": "In 1925 I started my own outfit to sell my work to the newspapers. We even ran Treasure Island as a comic strip.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "Is that how you got into comics?", "next": "founding_01" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  }
+]
