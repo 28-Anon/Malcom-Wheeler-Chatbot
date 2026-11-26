@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ending_01",
+    "topic": "ending",
+    "type": "line",
+    "text": "Leaving already? Well, I won't keep you.",
+    "mood": "neutral",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Thank you for your time, Major.",
+        "next": "ending_reconciled",
+        "conditions": { "minRapport": 70, "requiresFlags": ["heardLockout"] }
+      },
+      {
+        "id": "b",
+        "text": "Thank you for your time, Major.",
+        "next": "ending_unfinished",
+        "conditions": { "minRapport": 70, "blockedByFlags": ["heardLockout"] }
+      },
+      {
+        "id": "c",
+        "text": "Thank you for your time, Major.",
+        "next": "ending_unfinished",
+        "conditions": { "maxRapport": 69 }
+      },
+      { "id": "d", "text": "Actually, I have more questions.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "ending_reconciled",
+    "topic": "ending",
+    "type": "ending",
+    "text": "You've let an old man tell his story properly. Not many have. Perhaps I did start something after all. Good day, friend.",
+    "mood": "warm",
+    "choices": []
+  },
+  {
+    "id": "ending_unfinished",
+    "topic": "ending",
+    "type": "ending",
+    "text": "Well, that's enough for one afternoon. Come back sometime, and there's more I could tell you.",
+    "mood": "neutral",
+    "choices": []
+  },
+  {
+    "id": "ending_door_closed",
+    "topic": "ending",
+    "type": "ending",
+    "text": "I think we're finished here. Good afternoon.",
+    "mood": "angry",
+    "choices": []
+  }
+]
