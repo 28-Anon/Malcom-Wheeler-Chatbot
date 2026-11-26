@@ -1,0 +1,92 @@
+[
+  {
+    "id": "downfall_01",
+    "topic": "downfall",
+    "type": "line",
+    "text": "By 1936 the books were selling, but the returns and the printing bills ran ahead of us. A debt is a siege, friend. It only tightens.",
+    "mood": "guarded",
+    "onEnter": { "unlockTopics": ["legacy"] },
+    "choices": [
+      { "id": "a", "text": "Who did you owe?", "next": "downfall_02" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "downfall_02",
+    "topic": "downfall",
+    "type": "line",
+    "text": "Donenfeld printed my books and carried my debts. When I needed money for Detective Comics, he offered it, at the price of a partnership. I signed. A man with creditors at the door does not haggle long.",
+    "mood": "guarded",
+    "choices": [
+      { "id": "a", "text": "That sounds like you had no real choice.", "next": "downfall_03", "effects": { "rapport": 10 } },
+      {
+        "id": "b",
+        "text": "So you made a bad business deal?",
+        "next": "downfall_03b",
+        "effects": { "rapport": -10, "setFlags": ["challengedBusiness"] }
+      },
+      {
+        "id": "c",
+        "text": "How did it end?",
+        "next": "downfall_04",
+        "conditions": { "minRapport": 60 }
+      }
+    ]
+  },
+  {
+    "id": "downfall_03",
+    "topic": "downfall",
+    "type": "line",
+    "text": "So Detective Comics, Inc. was born, with Donenfeld and his accountant, Jack Liebowitz, as my partners. I had the ideas. They had the ledgers.",
+    "mood": "guarded",
+    "choices": [
+      { "id": "a", "text": "What happened in the end?", "next": "downfall_03c" },
+      {
+        "id": "b",
+        "text": "Did they treat you fairly?",
+        "next": "downfall_04",
+        "conditions": { "minRapport": 60 }
+      }
+    ]
+  },
+  {
+    "id": "downfall_03b",
+    "topic": "downfall",
+    "type": "line",
+    "text": "A bad deal? Perhaps. You try haggling with a man who holds every one of your debts. I dare say you would have signed too.",
+    "mood": "angry",
+    "choices": [
+      { "id": "a", "text": "How did it end?", "next": "downfall_03c" }
+    ]
+  },
+  {
+    "id": "downfall_03c",
+    "topic": "downfall",
+    "type": "line",
+    "text": "By 1938 I was out. Sued, bankrupt, and the company sold to Donenfeld's outfit. That is the short of it.",
+    "mood": "bitter",
+    "choices": [
+      {
+        "id": "a",
+        "text": "Is there more to the story?",
+        "next": "downfall_04",
+        "conditions": { "minRapport": 60 }
+      },
+      { "id": "b", "text": "What became of the company after you?", "next": "legacy_01" },
+      { "id": "c", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "downfall_04",
+    "topic": "downfall",
+    "type": "line",
+    "text": "He paid for a cruise. Go to Cuba, rest, come back with new ideas, he said. I came home to a locked office and a stack of lawyers' papers. I have been shot at, and that still stung worse.",
+    "mood": "bitter",
+    "conditions": { "minRapport": 60 },
+    "onEnter": { "unlockTopics": ["legacy"], "setFlags": ["heardLockout"] },
+    "choices": [
+      { "id": "a", "text": "Did you ever see Superman's success coming?", "next": "legacy_01" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  }
+]
