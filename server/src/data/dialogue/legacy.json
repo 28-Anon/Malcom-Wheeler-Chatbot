@@ -1,0 +1,92 @@
+[
+  {
+    "id": "legacy_01",
+    "topic": "legacy",
+    "type": "line",
+    "text": "I see the children with their comic books on the subway and I think: I built the road they're travelling on. Others collected the tolls.",
+    "mood": "bitter",
+    "choices": [
+      {
+        "id": "a",
+        "text": "What do you make of Superman?",
+        "next": "legacy_char_superman",
+        "conditions": { "minRapport": 60 }
+      },
+      {
+        "id": "b",
+        "text": "What do you make of Superman?",
+        "next": "legacy_char_superman_deflect",
+        "conditions": { "maxRapport": 59 }
+      },
+      { "id": "c", "text": "And Batman?", "next": "legacy_char_batman" },
+      { "id": "d", "text": "Do you have any regrets?", "next": "legacy_02" }
+    ]
+  },
+  {
+    "id": "legacy_char_superman",
+    "topic": "legacy",
+    "type": "line",
+    "text": "Superman. Those boys had been carrying that idea around for years. A few months more, and the strongest man in the world would have been working for me.",
+    "mood": "bitter",
+    "conditions": { "minRapport": 60 },
+    "choices": [
+      { "id": "a", "text": "And Batman?", "next": "legacy_char_batman" },
+      { "id": "b", "text": "Do you have any regrets?", "next": "legacy_02", "effects": { "rapport": 5 } }
+    ]
+  },
+  {
+    "id": "legacy_char_superman_deflect",
+    "topic": "legacy",
+    "type": "line",
+    "text": "I'd rather not talk about Superman. Ask me something else.",
+    "mood": "guarded",
+    "conditions": { "maxRapport": 59 },
+    "choices": [
+      { "id": "a", "text": "What about Batman?", "next": "legacy_char_batman" },
+      { "id": "b", "text": "Do you have any regrets?", "next": "legacy_02" }
+    ]
+  },
+  {
+    "id": "legacy_char_batman",
+    "topic": "legacy",
+    "type": "line",
+    "text": "Batman turned up in Detective Comics in 1939. My title, a year after I'd lost it.",
+    "mood": "bitter",
+    "choices": [
+      { "id": "a", "text": "What about the newer heroes?", "next": "legacy_char_later" },
+      { "id": "b", "text": "Do you have any regrets?", "next": "legacy_02" }
+    ]
+  },
+  {
+    "id": "legacy_char_later",
+    "topic": "legacy",
+    "type": "line",
+    "text": "Wonder Woman? I know the name. My grandchildren tell me there's a whole league of them now. Back in my day, one hero per magazine was plenty.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Do you have any regrets?", "next": "legacy_02" }
+    ]
+  },
+  {
+    "id": "legacy_02",
+    "topic": "legacy",
+    "type": "line",
+    "text": "Regrets? I trusted the wrong partner. In the Army, at least, you know which side the enemy is on.",
+    "mood": "bitter",
+    "choices": [
+      { "id": "a", "text": "What would you tell someone starting a company?", "next": "legacy_03" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  },
+  {
+    "id": "legacy_03",
+    "topic": "legacy",
+    "type": "line",
+    "text": "If you ever start a company, keep your own books and owe no man more than you can repay by Friday.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Thank you, Major. I think that's everything.", "next": "ending_01" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  }
+]
