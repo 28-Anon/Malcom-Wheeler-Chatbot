@@ -1,0 +1,130 @@
+[
+  {
+    "id": "military_01",
+    "topic": "military",
+    "type": "line",
+    "text": "I learned to ride before I learned my algebra. A horse ranch in Washington state will do that to a boy.",
+    "mood": "warm",
+    "choices": [
+      { "id": "a", "text": "Did you always want to join the Army?", "next": "military_02" },
+      { "id": "b", "text": "What was your family like?", "next": "military_01b", "effects": { "rapport": 5 } }
+    ]
+  },
+  {
+    "id": "military_01b",
+    "topic": "military",
+    "type": "line",
+    "text": "My mother was a journalist and kept a lively house. Theodore Roosevelt came through our door, and Rudyard Kipling too. A boy listens hard with men like that at the table.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "And after that, the Army?", "next": "military_02" }
+    ]
+  },
+  {
+    "id": "military_02",
+    "topic": "military",
+    "type": "line",
+    "text": "My mother sent me to the Manlius School in New York to put some discipline into me. After that, the Cavalry. I never wanted anything else.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "Where did the Army send you?", "next": "military_03" },
+      { "id": "b", "text": "Were you a good soldier?", "next": "military_02b" }
+    ]
+  },
+  {
+    "id": "military_02b",
+    "topic": "military",
+    "type": "line",
+    "text": "They made me a major around 1917. One of the youngest in the Cavalry, and some said the whole Army. I'll let you decide which.",
+    "mood": "amused",
+    "choices": [
+      { "id": "a", "text": "Where did they send you?", "next": "military_03" }
+    ]
+  },
+  {
+    "id": "military_03",
+    "topic": "military",
+    "type": "line",
+    "text": "The Mexican border, the Philippines, Siberia in winter. I have been cold, sick and shot at, and I would not trade a day of it.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "What did you do after the war?", "next": "military_03b" },
+      { "id": "b", "text": "Why did you leave the Army?", "next": "military_04" }
+    ]
+  },
+  {
+    "id": "military_03b",
+    "topic": "military",
+    "type": "line",
+    "text": "I studied in France, at Saint-Cyr and the École Supérieure de Guerre. I came home thinking I knew how a modern army ought to be run.",
+    "mood": "proud",
+    "choices": [
+      { "id": "a", "text": "Did the Army agree with you?", "next": "military_04" }
+    ]
+  },
+  {
+    "id": "military_04",
+    "topic": "military",
+    "type": "line",
+    "text": "In 1922 I wrote an open letter to President Harding. I told him the Army was run by men more interested in their careers than their soldiers. I was right, and they made sure I paid for it.",
+    "mood": "angry",
+    "choices": [
+      { "id": "a", "text": "That must have taken courage.", "next": "military_05", "effects": { "rapport": 10 } },
+      {
+        "id": "b",
+        "text": "Wasn't that a bit reckless?",
+        "next": "military_04b",
+        "effects": { "rapport": -10, "setFlags": ["challengedLetter"] }
+      },
+      {
+        "id": "c",
+        "text": "What happened to you after the letter?",
+        "next": "military_06",
+        "conditions": { "minRapport": 60 }
+      }
+    ]
+  },
+  {
+    "id": "military_04b",
+    "topic": "military",
+    "type": "line",
+    "text": "Reckless? Perhaps. A soldier is meant to obey, I know that. But a soldier who sees rot and says nothing is no better than the rot.",
+    "mood": "guarded",
+    "choices": [
+      { "id": "a", "text": "What happened next?", "next": "military_05" }
+    ]
+  },
+  {
+    "id": "military_05",
+    "topic": "military",
+    "type": "line",
+    "text": "They court-martialled me. Not for cowardice, not for theft. For a letter.",
+    "mood": "bitter",
+    "choices": [
+      { "id": "a", "text": "Did you stay in the Army?", "next": "military_07" }
+    ]
+  },
+  {
+    "id": "military_06",
+    "topic": "military",
+    "type": "line",
+    "text": "Not long after that letter, I was shot and wounded. The Army said a guard took me for an intruder. My family never believed it. I will leave it to you what to believe.",
+    "mood": "guarded",
+    "conditions": { "minRapport": 60 },
+    "onEnter": { "setFlags": ["heardShooting"] },
+    "choices": [
+      { "id": "a", "text": "That's awful. What happened after that?", "next": "military_05", "effects": { "rapport": 5 } }
+    ]
+  },
+  {
+    "id": "military_07",
+    "topic": "military",
+    "type": "line",
+    "text": "I resigned my commission in 1923. A man needs to eat, and I had a typewriter and a head full of stories.",
+    "mood": "neutral",
+    "choices": [
+      { "id": "a", "text": "So you turned to writing?", "next": "pulps_01" },
+      { "id": "b", "text": "Let's talk about something else.", "next": "intro_hub" }
+    ]
+  }
+]
